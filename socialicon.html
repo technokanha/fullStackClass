@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Icon Styles</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+        }
+
+        .btn {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 30%;
+            box-shadow: 0 5px 15px -5px #00000070;
+            overflow: hidden;
+            position: relative;
+            color: dodgerblue;
+        }
+
+        .btn i {
+            font-size: 25px;
+            line-height: 90px;
+            transition: .2 linear;
+
+        }
+
+        .btn:hover i {
+            transition-duration: 0.75s;
+            transform: scale(1.5);
+            color: white;
+
+        }
+
+
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background-color: dodgerblue;
+            transform: rotate(45deg);
+            left: -110%;
+            top: 90%
+        }
+
+        .btn:hover::before {
+            animation: aaa .7s 1;
+            top: -10%;
+            left: -10%;
+        }
+
+        @keyframes aaa {
+            0% {
+                left: -110%;
+                top: 90%;
+            }
+
+            50% {
+                left: 10%;
+                top: -30%;
+            }
+
+
+            100% {
+                left: -10%;
+                top: -10%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="center">
+        <a class="btn" href="">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="btn" href="">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="btn" href="https://www.google.com › gmail">
+            <i class="fa fa-google"></i>
+        </a>
+        <a class="btn" href="">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+    </div>
+
+
+</body></html>
